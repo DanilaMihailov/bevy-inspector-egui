@@ -24,7 +24,7 @@ clipboard = ["bevy_egui/manage_clipboard"]
 nightly = []
 
 [dependencies]
-bevy = { version = "0.5", default-features = false }
+bevy = { git = "https://github.com/bevyengine/bevy", branch = "main", default-features = false }
 bevy_egui = { version = "0.4", default-features = false, features = ["open_url"] }
 emath = "0.11"
 bevy_rapier3d = { version = "0.9", optional = true }
@@ -34,7 +34,7 @@ image = { version = "0.23", default-features = false }
 bevy-inspector-egui-derive = { version = "0.4", path = "bevy-inspector-egui-derive" }
 
 [dev-dependencies]
-bevy = { version = "0.5", default-features = false, features = ["x11", "render", "bevy_wgpu", "bevy_winit", "dynamic"] }
+bevy = { git = "https://github.com/bevyengine/bevy", branch = "main", default-features = false, features = ["x11", "render", "bevy_wgpu", "bevy_winit", "dynamic"] }
 bevy_mod_picking = { version = "0.4" }
 noise = "0.7"
 
@@ -45,3 +45,6 @@ required-features = ["rapier"]
 [[example]]
 name = "texture"
 required-features = ["bevy/png"]
+
+[patch.crates-io]
+bevy = { git = "https://github.com/bevyengine/bevy", branch = "main" }
